@@ -1,0 +1,59 @@
+:root{
+  /* --loading_time:500ms; */
+}
+
+.home-main{
+    
+    height: 100vh;
+    width: 100vw;
+    padding:0px var(--padd_main);
+    padding-top:var(--nav_size);
+    /* background-color: red; */
+    display: flex;
+    transition: opacity  var(--loading_time) ease-in-out;
+    justify-content: center;
+    
+  }
+
+  /* .loading_home{
+    opacity: 0;
+  }
+
+  .loaded_home{
+    opacity: 1;
+  } */
+  
+  .home-main-sub{
+    /* width: 100%; */
+    width: var(--width_main);
+    height: 95%;
+   
+}
+
+.mySwiper{
+    width: 100%;
+    height: 100%;
+    /* border:2px solid red; */
+}
+.mySwiper-slice > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center;
+    z-index: 200;
+   
+  /* animation: scaleDown 3000ms ease-in-out both;
+  animation-iteration-count: 1; */
+
+}
+
+
+
+@keyframes scaleDown {
+    from {
+      
+    }
+    to {
+      zoom: 2.5;
+    }
+  }
