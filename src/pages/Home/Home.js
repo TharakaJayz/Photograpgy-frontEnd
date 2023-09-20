@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -6,49 +6,48 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import 'swiper/css/effect-fade';
+import "swiper/css/effect-fade";
 
-import 'swiper/css/zoom';
+import "swiper/css/zoom";
 
 // import required modules
-import { Autoplay, Pagination, Navigation, EffectFade ,Zoom} from "swiper/modules";
+import {
+  Autoplay,
+  Pagination,
+  Navigation,
+  EffectFade,
+  Zoom,
+} from "swiper/modules";
 
 import img1 from "../../assets/back 3.jpg";
 import img2 from "../../assets/background 1.jpg";
 import img3 from "../../assets/back contact.jpg";
 
-
-
 // Install Swiper modules
 
-
-
 const Home = () => {
+  const [isLoading, setIsLoading] = useState(true);
 
-  const [isLoading,setIsLoading] = useState(true);
-
-  useEffect(() =>{
-
-    setTimeout(()=>{
+  useEffect(() => {
+    setTimeout(() => {
       setIsLoading(false);
-    },500)
+    }, 500);
+  }, []);
 
-  },[])
-
-  
   return (
-    <div className= {isLoading ? `home-main loading_home` : `home-main loaded_home`}>
+    <div
+      className={isLoading ? `home-main loading_home` : `home-main loaded_home`}
+    >
       <div className="home-main-sub">
         <Swiper
-
-style={{
-  '--swiper-navigation-color': '#fff',
-  '--swiper-pagination-color': '#ffd',
-}}
-          zoom ={true}
+          style={{
+            "--swiper-navigation-color": "#fff",
+            "--swiper-pagination-color": "#ffd",
+          }}
+          zoom={true}
           spaceBetween={30}
           effect={"fade"}
-          loop ={true}
+          loop={true}
           centeredSlides={true}
           autoplay={{
             delay: 3000,
@@ -56,12 +55,10 @@ style={{
           }}
           pagination={{
             clickable: true,
-            
           }}
           navigation={false}
-          EffectFade ={true}
-        
-          modules={[Autoplay, Pagination, Navigation, EffectFade ,Zoom]}
+          EffectFade={true}
+          modules={[Autoplay, Pagination, Navigation, EffectFade, Zoom]}
           speed={3000}
           className="mySwiper"
         >
