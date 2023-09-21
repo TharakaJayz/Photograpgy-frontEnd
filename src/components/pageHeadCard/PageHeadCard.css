@@ -11,6 +11,7 @@
 
     /* font-family: Marcellus, sans-serif; */
     font-family: var(--font-second);
+    
    
 }
 
@@ -27,8 +28,12 @@
 
 .page_head_span{
     position: absolute;
-    color: white;
-    font-size: 6rem;
+   
+    /* font-size:clamp(1rem,4vw + 2rem , 8rem); */
+    /* font-size: 6rem; */
+    font-size: min(7vw,8rem);
+   
+   
     width: 100%;
     bottom: 10%;
     bottom: 35%;
@@ -38,7 +43,7 @@
     transition: transform 1000ms ease-in-out;
     transition: color 1000ms ease-in-out;
     transition: opacity 1000ms ease-in-out;
-    color: white;
+    color: rgb(248, 248, 248);
 }
 
 .page_head_span_loading{
@@ -47,11 +52,13 @@
     color: red ;
     
     
+    
  
 }
 
 .page_head_span_loaded{
     opacity: 1;
+    
     
     /* transform: translateY(-150px); */
     /* color: yellow; */

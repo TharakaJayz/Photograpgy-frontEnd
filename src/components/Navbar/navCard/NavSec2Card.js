@@ -9,7 +9,6 @@ const NavSec2Card = (props) => {
     <div className={`navSec2Card-main ${props.className} ${classStyle}  `}>
       <span
         className="navSec2Card-main-sp sec2Card-sp1"
-        
         onMouseEnter={() => {
           setClassStyle("home-hover");
         }}
@@ -21,10 +20,10 @@ const NavSec2Card = (props) => {
       </span>
       <span
         className="navSec2Card-main-sp sec2Card-sp2"
-        onClick={()=>{
+        onClick={() => {
           navigation("/gallery");
           window.location.reload();
-      }}
+        }}
         onMouseEnter={() => {
           setClassStyle("gallery-hover");
         }}
@@ -36,6 +35,10 @@ const NavSec2Card = (props) => {
       </span>
       <span
         className="navSec2Card-main-sp sec2Card-sp3"
+        onClick={() => {
+          navigation("/Services");
+          window.location.reload();
+        }}
         onMouseEnter={() => {
           setClassStyle("Services-hover");
         }}

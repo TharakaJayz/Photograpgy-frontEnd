@@ -6,12 +6,16 @@
     display: flex;
     justify-content: center;
     
+    position: relative;
+    
    
     
 }
 
 .gallery_sub{
     width: var(--width_main);
+    /* position: absolute;
+    z-index: 5000 !important ; */
 
 
 }
@@ -19,6 +23,25 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    font-size:clamp(0.6rem,2vw + 0.2rem , 2.5rem);
+    font-size:clamp(0.6rem,1vw + 0.15rem , 2.5rem);
+    gap: 2em;
+    align-items: center;
+    margin-top: 3em;
+    font-family: var(--font-second);
+    text-transform: uppercase;
     
+   
+    
+}
+
+.gallary_span{
+    /* z-index: 50000 !important ; */
+    padding-bottom: 0.2em;
+    border-bottom: 2px solid transparent;
+    transition: all 500ms ease-in-out;
+    cursor: pointer;
+}
+
+.gallary_span:hover{
+    border-bottom: 2px solid black !important;
 }
